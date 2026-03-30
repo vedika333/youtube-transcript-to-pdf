@@ -1,0 +1,15 @@
+{
+  "actorSpecification": 1,
+  "name": "yt-transcript-pdf",
+  "title": "YouTube Transcript to PDF Generator",
+  "description": "Extract YouTube transcripts and convert to professional PDFs. No API keys needed.",
+  "version": "0.0",
+  "buildTag": "latest",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

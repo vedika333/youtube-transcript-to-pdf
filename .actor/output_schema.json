@@ -1,0 +1,24 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "YouTube Transcript to PDF Output",
+  "properties": {
+    "transcriptPDFs": {
+      "type": "string",
+      "title": "Transcript PDFs",
+      "description": "Download generated PDF files from Key-Value Store",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/transcript_"
+    },
+    "results": {
+      "type": "string",
+      "title": "Results Dataset",
+      "description": "Full results with video info and PDF keys",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    },
+    "outputSummary": {
+      "type": "string",
+      "title": "Run Summary",
+      "description": "Total processed, succeeded and failed count",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/OUTPUT_SUMMARY"
+    }
+  }
+}

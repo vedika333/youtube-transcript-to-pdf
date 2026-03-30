@@ -1,0 +1,63 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Results Overview",
+      "transformation": {
+        "fields": [
+          "status",
+          "title",
+          "channelName",
+          "durationFormatted",
+          "wordCount",
+          "language",
+          "pdfKey",
+          "processedAt",
+          "error"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "status": {
+            "label": "Status",
+            "format": "text"
+          },
+          "title": {
+            "label": "Video Title",
+            "format": "text"
+          },
+          "channelName": {
+            "label": "Channel",
+            "format": "text"
+          },
+          "durationFormatted": {
+            "label": "Duration",
+            "format": "text"
+          },
+          "wordCount": {
+            "label": "Words",
+            "format": "number"
+          },
+          "language": {
+            "label": "Language",
+            "format": "text"
+          },
+          "pdfKey": {
+            "label": "PDF Key",
+            "format": "text"
+          },
+          "processedAt": {
+            "label": "Processed At",
+            "format": "text"
+          },
+          "error": {
+            "label": "Error",
+            "format": "text"
+          }
+        }
+      }
+    }
+  }
+}

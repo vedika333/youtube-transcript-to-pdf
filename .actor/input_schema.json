@@ -1,0 +1,50 @@
+{
+  "title": "YouTube Transcript to PDF Generator",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "urls": {
+      "title": "YouTube URL(s)",
+      "type": "array",
+      "description": "One or more YouTube video URLs to extract transcripts from.",
+      "editor": "stringList",
+      "prefill":["https://www.youtube.com/watch?v=dQw4w9WgXcQ"],
+      "example": ["https://www.youtube.com/watch?v=dQw4w9WgXcQ"]
+    },
+    "language": {
+      "title": "Preferred Language (Optional)",
+      "type": "string",
+      "description": "Optional. Preferred transcript language code e.g. 'en', 'hi', 'es'. If not available or left empty, automatically picks whatever language YouTube has — so transcript is ALWAYS fetched regardless of language.",
+      "default": "en",
+      "editor": "textfield"
+    },
+    "includeTimestamps": {
+      "title": "Include Timestamps",
+      "type": "boolean",
+      "description": "Show [MM:SS] before each caption line. If false, captions are merged into clean readable paragraphs.",
+      "default": false
+    },
+    "includeMetadata": {
+      "title": "Include Cover Page",
+      "type": "boolean",
+      "description": "Add a cover page with video title, channel, duration, views and description.",
+      "default": true
+    },
+    "cleanTranscript": {
+      "title": "Clean Transcript",
+      "type": "boolean",
+      "description": "Remove annotations like [Music], [Applause], (laughter) from the transcript.",
+      "default": true
+    },
+    "proxyConfiguration": {
+      "title": "Proxy Configuration",
+      "type": "object",
+      "description": "Proxy is required when running on Apify cloud to bypass YouTube IP blocks. Use Apify Residential Proxy for best results. Each user pays for their own proxy usage independently.",
+      "editor": "proxy",
+      "nullable": true,
+      "sectionCaption": "Proxy Settings",
+      "sectionDescription": "YouTube blocks requests from cloud provider IPs (AWS, GCP etc.). A proxy routes requests through a residential IP to avoid this."
+    }
+  },
+  "required": ["urls"]
+}
